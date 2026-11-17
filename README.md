@@ -1,4 +1,4 @@
-# EDS demo: hero, cards, accordion
+## EDS demo: hero, cards, accordion
 
 These are the `blocks/` folder contents for an Adobe Edge Delivery Services project.
 Add them to a fork of the official **aem-boilerplate**, which provides
