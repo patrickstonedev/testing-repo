@@ -1,0 +1,38 @@
+.accordion { max-width: 800px; }
+
+.accordion details { border-bottom: 1px solid #d9d9d9; }
+
+.accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 4px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion summary::-webkit-details-marker { display: none; }
+.accordion summary::after { content: '+'; font-size: 1.5rem; line-height: 1; }
+.accordion details[open] > summary::after { content: '\2212'; }
+
+.accordion summary:focus-visible {
+  outline: 3px solid #1a5fd0;
+  outline-offset: 2px;
+}
+
+.accordion .accordion-item-body { padding: 0 4px 16px; }
+.accordion .accordion-item-body > :first-child { margin-top: 0; }
+.accordion .accordion-item-body > :last-child { margin-bottom: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion details[open] .accordion-item-body {
+    animation: accordion-open 0.2s ease-out;
+  }
+}
+
+@keyframes accordion-open {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
